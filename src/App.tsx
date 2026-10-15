@@ -1,5 +1,5 @@
 import { ChartPreview } from "./ChartPreview";
-import { education, experience, profile, skills, work } from "./content";
+import { current, education, experience, profile, skills, work } from "./content";
 
 export function App() {
   return (
@@ -22,7 +22,7 @@ export function App() {
       <main id="top">
         <section className="hero">
           <div>
-            <p className="eyebrow">Frontend Engineer · React.js</p>
+            <p className="eyebrow">{profile.role} · React, Next.js, TypeScript</p>
             <h1>{profile.name}</h1>
             <p className="lede">{profile.summary}</p>
             <p className="meta-line">{profile.location}</p>
@@ -40,11 +40,9 @@ export function App() {
           </div>
           <aside className="now" aria-label="Current role">
             <p className="eyebrow on-dark">Now</p>
-            <h2>Software Engineer, Analyttica Datalab</h2>
-            <p className="now-meta">May 2023 — Present · Bengaluru</p>
-            <p>
-              Building the LEAPS dashboard studio: canvas authoring, a multi-type chart system, and a Plotly-to-ECharts migration, with analytics in DuckDB WASM.
-            </p>
+            <h2>{current.title}</h2>
+            <p className="now-meta">{current.meta}</p>
+            <p>{current.blurb}</p>
             <ChartPreview />
           </aside>
         </section>

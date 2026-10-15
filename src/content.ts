@@ -1,6 +1,6 @@
 export const profile = {
   name: "Murlidhar S G",
-  role: "Frontend Engineer",
+  role: "Software Engineer",
   location: "Bengaluru, Karnataka",
   email: "srimuruli5@gmail.com",
   phoneDisplay: "+91 91136 40647",
@@ -8,27 +8,49 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/murlidhar-s-g",
   github: "https://github.com/Murli1498",
   summary:
-    "I build production web applications in React and TypeScript. Most recently that has been an AI dashboard studio: canvas authoring, a typed chart system, and analytics that run in the browser.",
+    "Software engineer with nearly four years building React, Next.js, and TypeScript applications. I shipped full-stack features for an e-learning platform on Node.js, Express, and MongoDB, and I now build dashboards, tables, and in-browser analytics for a self-service BI product.",
+};
+
+export const current = {
+  title: "Software Engineer, Analyttica Datalab",
+  meta: "October 2025 — Present · Bengaluru",
+  blurb:
+    "Building a self-service BI platform: dashboard authoring, virtualized tables, and analytics that run in the browser with DuckDB WASM. The work has improved user productivity by about 30%.",
 };
 
 export const work = [
   {
     index: "01",
-    title: "LEAPS dashboard studio",
+    title: "Self-service BI platform",
     place: "Analyttica Datalab",
-    when: "2023 — Present",
-    stack: ["React 19", "TypeScript", "Apache ECharts", "DuckDB WASM", "TanStack Query"],
+    when: "Oct 2025 — Present",
+    stack: ["React", "Next.js", "TypeScript", "Zustand", "TanStack", "DuckDB WASM", "Apache ECharts"],
     summary:
-      "A studio for authoring dashboards. The project hub, canvas routing, and dataset preview sit on a typed chart registry covering bar, line, area, pie, KPI, table, scatter, funnel, and heatmap.",
+      "A product for authoring dashboards and analytical workflows. Shared React components cover charts, tables, filters, layouts, and configuration, and heavy analysis runs in the browser.",
     points: [
-      "Moved chart rendering from Plotly to Apache ECharts. Style controls for axes, legends, series, KPI tiles, and tables update the canvas without a full redraw.",
-      "Dataset preview and in-browser analytics run on DuckDB WASM and Arquero. TanStack Query drops cached previews when a dataset is uploaded, renamed, or deleted.",
-      "Code-split the canvas so charts, DuckDB, spreadsheet parsing, and the rich-text editor load only when a dashboard opens. Studio panels no longer re-render on every keystroke. Lighthouse scores improved by 20%.",
-      "Shipped project search, conversation history, and an in-canvas Copilot. Prompts and replies stream over WebSockets, with reconnect and Redux-backed conversation updates.",
+      "Designed 30 reusable components for charts, tables, filters, slicers, layouts, and configuration panels, shared across the dashboard and chart builder.",
+      "Built tables with TanStack Table and TanStack Virtual that page rows in batches of 50 and cache 12 pages around the viewport, so only the visible window renders.",
+      "Shipped drag-and-drop layouts, drill-down and drill-through, crosstabs, slicers, and what-if analysis, plus sharing, guest and embedded access, bookmarks, and PNG, PDF, and PPTX export.",
+      "Ran client-side analytics with DuckDB WASM, Apache Arrow, Arquero, and Parquet, and drew charts with Apache ECharts and Plotly.js. Route-based code splitting cut initial load time by about 30%.",
+      "Wrote 50+ Vitest and React Testing Library files and extended Playwright coverage used by Bitbucket Pipelines merge gates.",
     ],
   },
   {
     index: "02",
+    title: "E-learning platform",
+    place: "Analyttica Datalab",
+    when: "May 2023 — Sep 2025",
+    stack: ["React", "Next.js", "Node.js", "Express", "MongoDB", "Nx", "Module Federation"],
+    summary:
+      "Full-stack course delivery: React and Next.js on the front, Node.js, Express, and MongoDB on the back, later split so frontends could ship independently.",
+    points: [
+      "Designed REST APIs for content delivery, authentication, and course progress, and used MongoDB aggregation pipelines for analytics dashboards.",
+      "Moved a monolithic frontend to micro-frontends in an Nx monorepo with Module Federation. Independent deploys raised team efficiency by 25%, and the maintainability work cut development cost by 15%.",
+      "Cut page load times by 30% through code splitting, MongoDB query tuning, and FCP and TTI work, and improved SEO rankings by 20%. Integrated payment gateways and third-party APIs.",
+    ],
+  },
+  {
+    index: "03",
     title: "FashionCube",
     place: "Personal project",
     when: "E-commerce",
@@ -37,21 +59,21 @@ export const work = [
     summary:
       "A storefront in a Lerna monorepo, structured so catalog, cart, and shared UI could be developed once and reused across applications.",
     points: [
-      "Built the design system: common components, layouts, and styling rules.",
+      "Built a design system of common components, layouts, and styling rules with SCSS and Styled Components.",
       "Shipped product listing, product details, category navigation, recommendations, cart management, and authentication-ready modules.",
     ],
   },
   {
-    index: "03",
+    index: "04",
     title: "Pricing Engine",
     place: "Product work",
     when: "Pricing intelligence",
-    stack: ["React", "Redux Toolkit", "REST", "Bootstrap"],
+    stack: ["React", "Redux", "REST", "Bootstrap"],
     summary:
       "A pricing desk that tracks 1,000+ parts across competitor sites and turns that into comparisons, gaps, and recommendations.",
     points: [
       "Automated price discovery and market-gap monitoring instead of manual checks.",
-      "Connected REST APIs and held dashboard state in Redux Toolkit so competitor comparisons stayed in sync with the latest pull.",
+      "Held dashboard state in Redux across 27 reusable components and REST APIs, cutting data-fetch latency by 15%.",
     ],
   },
 ];
@@ -61,14 +83,27 @@ export const experience = [
     role: "Software Engineer",
     org: "Analyttica Datalab",
     place: "Bengaluru, Karnataka",
-    dates: "May 2023 — Present",
+    dates: "Oct 2025 — Present",
     points: [
-      "Built the LEAPS dashboard studio in React 19 and TypeScript, including the project hub, canvas, and a typed chart registry.",
-      "Migrated charts from Plotly to Apache ECharts and wired Style-tab controls so visual settings render without a full redraw.",
-      "Served in-browser analytics with DuckDB WASM and Arquero, and used TanStack Query to invalidate dataset previews after upload, rename, and delete.",
-      "Code-split the canvas and stopped studio panels from re-rendering on every keystroke. Lighthouse performance improved by 20%.",
-      "Integrated the in-canvas Copilot over WebSockets, including socket lifecycle, automatic reconnect, and Redux-backed conversation updates.",
-      "Designed a master data module with full CRUD for asset tag management, and a pricing engine that automated calculations and business-rule evaluation.",
+      "Architect React, Next.js, and TypeScript applications with Vite and React Router for dashboard creation, visualization, and analytics workflows.",
+      "Separate client, server, cached, and UI state with Zustand and TanStack Query, and render charts with Apache ECharts and Plotly.js.",
+      "Build interactive dashboards: drag-and-drop layouts, resizable cells, drill-down and drill-through, crosstabs, slicers, Top/Bottom N, time grain, and multi-level filtering.",
+      "Run browser analytics with DuckDB WASM, Apache Arrow, Arquero, and Parquet. Sharing, guest and embedded access, bookmarks, and PNG, PDF, and PPTX export ship with the product, along with what-if scenario planning.",
+      "Improved initial load by about 30% with route-based code splitting, lazy loading, memoization, and rendering work. UI uses Shadcn, Radix, Tailwind, and Material UI, with light, dark, and multi-theme support.",
+      "Put unit tests, Playwright, ESLint, and the TypeScript build on every pull request in Bitbucket Pipelines. The pipeline requires a Jira ticket and blocks the merge until those checks pass.",
+      "Use Claude Code and Cursor to extend the Python FastAPI backend — routers, schemas, services, and the SQL compiler — with pytest coverage, and mentor juniors through onboarding and interviews.",
+    ],
+  },
+  {
+    role: "Associate Software Engineer",
+    org: "Analyttica Datalab",
+    place: "Bengaluru, Karnataka",
+    dates: "May 2023 — Sep 2025",
+    points: [
+      "Built and maintained full-stack features for an e-learning platform with React and Next.js, and Node.js, Express, and MongoDB.",
+      "Designed REST APIs for dynamic content, authentication, and course progress, and shaped MongoDB schemas with aggregation pipelines for analytics dashboards.",
+      "Migrated the frontend from a monolith to micro-frontends using an Nx monorepo and Module Federation, enabling independent deployments.",
+      "Tuned frontend load (code splitting, FCP, TTI) and MongoDB queries. Tested with Jest and React Testing Library, and validated APIs with Postman and Chrome DevTools.",
     ],
   },
   {
@@ -78,8 +113,8 @@ export const experience = [
     dates: "Jan 2023 — May 2023",
     points: [
       "Trained in React.js, Redux Toolkit, Material UI, Docker, and the Nx framework with D3.",
-      "Built reusable UI components and responsive layouts in the LEAPS application.",
-      "Worked with QA to reproduce reported issues and ship fixes with senior engineers.",
+      "Contributed to the LEAPS application with reusable UI components and responsive Material UI layouts.",
+      "Found and fixed bugs across frontend and backend, cutting bug reports by 30%.",
     ],
   },
   {
@@ -96,32 +131,32 @@ export const experience = [
 
 export const skills: { label: string; items: string }[] = [
   {
-    label: "Languages",
-    items: "JavaScript (ES6+), TypeScript, Node.js, HTML5, CSS3",
-  },
-  {
-    label: "Frameworks",
-    items: "React.js, Next.js, Vite, TanStack Query, Zustand, Redux Toolkit, React Router, React Hook Form, Zod",
+    label: "Frontend",
+    items: "React.js, Next.js, TypeScript, JavaScript (ES6+), Zustand, TanStack Query, Redux Toolkit, React Router, Vite",
   },
   {
     label: "UI",
-    items: "Tailwind CSS, Radix UI, Material UI, Bootstrap, React-Bootstrap",
+    items: "Material UI, Shadcn UI, Radix UI, Tailwind CSS, Styled Components, SCSS, responsive layout, WCAG",
   },
   {
     label: "Data & visualization",
-    items: "Apache ECharts, Plotly, DuckDB WASM, Arquero, TanStack Table, D3, React Grid Layout",
+    items: "Apache ECharts, Plotly.js, TanStack Table, TanStack Virtual, DuckDB WASM, Apache Arrow, Arquero, D3",
   },
   {
     label: "Architecture",
-    items: "Component-driven development, micro-frontends, modular monorepos (Lerna, Nx)",
+    items: "Component architecture, shared libraries, Nx monorepos, micro-frontends, Module Federation",
   },
   {
-    label: "Testing",
-    items: "Vitest, Testing Library, Playwright, ESLint",
+    label: "Backend",
+    items: "Node.js, Express.js, MongoDB, Python, FastAPI, REST APIs",
+  },
+  {
+    label: "Testing & delivery",
+    items: "Vitest, Jest, React Testing Library, Playwright, pytest, ESLint, Bitbucket Pipelines, Git, GitHub, Bitbucket",
   },
   {
     label: "Tools",
-    items: "Git, GitHub, Bitbucket, Jira, Docker, Webpack, npm, Postman, VS Code, Cursor",
+    items: "Jira, Postman, Chrome DevTools, Docker, Webpack, Babel, npm, Cursor, Claude Code",
   },
 ];
 
